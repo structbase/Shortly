@@ -1,8 +1,19 @@
 header {
-    margin: 2rem;
+    margin: 1.5rem;
 }
+
+header ul{
+    margin: 0;
+    padding: 0;
+}
+
+header li{
+    line-height: normal;
+}
+
 .header-logo {
     height: 1.5rem;
+    align-self: center;
 }
 
 .custom-button {
@@ -19,4 +30,13 @@ header {
 .secondary-button {
     font-family: "Poppins", sans-serif;
     font-weight: bold;
+}
+
+.list-item {
+    list-style-type: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: hsl(0, 0%, 75%);
+    align-self: center;
 }

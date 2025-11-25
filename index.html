@@ -20,21 +20,30 @@
     </head>
     <body>
         <header class="section-1">
-            <div class="container d-flex justify-content-between  align-items-center">
-                <div class="col-auto ">
-                    <img class="header-logo" src="./images/logo.svg" alt="site logo" />
+            <div
+                class="container d-flex justify-content-between align-items-center"
+            >
+                <div class="d-flex align-items-center">
+                    <div class="col-auto me-4">
+                        <img
+                            class="header-logo"
+                            src="./images/logo.svg"
+                            alt="site logo"
+                        />
+                    </div>
+
+                    <nav>
+                        <ul class="d-flex justify-content-start">
+                            <li class="p-2 list-item">Features</li>
+                            <li class="p-2 list-item">Pricing</li>
+                            <li class="p-2 list-item">Resources</li>
+                        </ul>
+                    </nav>
                 </div>
 
-                <nav>
-                    <ul class="d-flex">
-                        <li>Features</li>
-                        <li>Pricing</li>
-                        <li>Resources</li>
-                    </ul>
-                </nav>
-                <div>
-                    <button>Login</button>
-                    <button class="custom-button">Sign Up</button>
+                <div class="d-flex align-items-center">
+                    <button class="btn list-item">Login</button>
+                    <button class="btn custom-button">Sign Up</button>
                 </div>
             </div>
         </header>
