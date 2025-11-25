@@ -1,0 +1,22 @@
+header {
+    margin: 2rem;
+}
+.header-logo {
+    height: 1.5rem;
+}
+
+.custom-button {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    color: aliceblue;
+    background-color: hsl(180, 66%, 49%);
+    border: 0;
+    padding: 7px 15px;
+    margin-left: 10px;
+    border-radius: 20px;
+}
+
+.secondary-button {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+}

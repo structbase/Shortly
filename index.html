@@ -9,23 +9,34 @@
             integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
             crossorigin="anonymous"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="style.css" />
         <title>URL Shortly</title>
     </head>
     <body>
-        <header class="section-1 d-flex">
-            <img src="./images/logo.svg" alt="site logo" />
+        <header class="section-1">
+            <div class="container d-flex justify-content-between  align-items-center">
+                <div class="col-auto ">
+                    <img class="header-logo" src="./images/logo.svg" alt="site logo" />
+                </div>
 
-            <nav>
-                <ul class="d-flex">
-                    <li>Features</li>
-                    <li>Pricing</li>
-                    <li>Resources</li>
-                </ul>
-            </nav>
-
-            <button>Login</button>
-            <button>Sign Up</button>
+                <nav>
+                    <ul class="d-flex">
+                        <li>Features</li>
+                        <li>Pricing</li>
+                        <li>Resources</li>
+                    </ul>
+                </nav>
+                <div>
+                    <button>Login</button>
+                    <button class="custom-button">Sign Up</button>
+                </div>
+            </div>
         </header>
 
         <div class="d-flex section-2">
@@ -54,8 +65,11 @@
                 advanced statistics dashboard.
             </p>
         </div>
-        <div class="section-5">
-            <div>
+        <div class="section-5 cards d-flex">
+            <div class="card-1">
+                <div>
+                    <img src="./images/icon-brand-recognition.svg" alt="" />
+                </div>
                 <h3>Brand Recognition</h3>
                 <p>
                     Boost your brand recognition with each click. Generic links
@@ -63,7 +77,10 @@
                     your content.
                 </p>
             </div>
-            <div>
+            <div class="card-2">
+                <div>
+                    <img src="./images/icon-detailed-records.svg" alt="" />
+                </div>
                 <h3>Detailed Records</h3>
                 <p>
                     Gain insights into who is clicking your links. Knowing when
@@ -71,7 +88,10 @@
                     better decisions
                 </p>
             </div>
-            <div>
+            <div class="card-3">
+                <div>
+                    <img src="./images/icon-fully-customizable.svg" alt="" />
+                </div>
                 <h3>Fully Customizable</h3>
                 <p>
                     Improve brand awareness and content discoverability through
