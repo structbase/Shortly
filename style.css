@@ -13,7 +13,6 @@
 
 header {
     margin-top: 2rem;
-
     margin-bottom: 4rem;
 }
 
@@ -71,7 +70,7 @@ header li {
 .hero-img {
     height: 23rem;
     width: 40rem;
-    margin-left: 2.5rem;
+    margin-left: 2rem;
 }
 
 .here-paragraph {
@@ -79,4 +78,23 @@ header li {
     font-size: 1.1rem;
     font-weight: 500;
     color: hsl(0, 0%, 75%) !important;
+}
+
+.section-3 {
+    margin-top: 4.07rem;
+    background-image: url("./images/bg-shorten-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 8.2rem;
+    background-color: hsl(257, 27%, 26%);
+}
+
+.section-3 > input {
+    height: 3.2rem;
+    border: none;
+    margin-left: 10px;
+}
+
+.section-4 > h2 {
+    font-family: "Poppins", sans-serif;
 }
