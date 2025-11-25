@@ -1,13 +1,28 @@
+/* .custome-font-color-Gray-400 {
+    color: hsl(0, 0%, 75%);
+}
+.custome-font-color-Gray-500 {
+    color: hsl(257, 7%, 63%);
+}
+.custome-font-color-Gray-900 {
+    color: hsl(255, 11%, 22%);
+}
+.custome-font-color-Gray-950 {
+    color: hsl(260, 8%, 14%);
+} */
+
 header {
-    margin: 1.5rem;
+    margin-top: 2rem;
+
+    margin-bottom: 4rem;
 }
 
-header ul{
+header ul {
     margin: 0;
     padding: 0;
 }
 
-header li{
+header li {
     line-height: normal;
 }
 
@@ -18,13 +33,18 @@ header li{
 
 .custom-button {
     font-family: "Poppins", sans-serif;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 0.8rem;
     color: aliceblue;
     background-color: hsl(180, 66%, 49%);
     border: 0;
     padding: 7px 15px;
     margin-left: 10px;
     border-radius: 20px;
+}
+
+.custom-button:hover {
+    background-color: hsl(180, 72%, 30%);
 }
 
 .secondary-button {
@@ -39,4 +59,24 @@ header li{
     font-size: 0.8rem;
     color: hsl(0, 0%, 75%);
     align-self: center;
+}
+
+.hero-header {
+    font-family: "Poppins", sans-serif;
+    font-weight: bolder;
+    font-size: 4rem;
+    color: hsl(260, 8%, 14%);
+}
+
+.hero-img {
+    height: 23rem;
+    width: 40rem;
+    margin-left: 2.5rem;
+}
+
+.here-paragraph {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 75%) !important;
 }
