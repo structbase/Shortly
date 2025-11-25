@@ -87,6 +87,8 @@ header li {
     background-size: cover;
     height: 8.2rem;
     background-color: hsl(257, 27%, 26%);
+
+
 }
 
 .section-3 > input {
@@ -95,6 +97,49 @@ header li {
     margin-left: 10px;
 }
 
-.section-4 > h2 {
+.section-4 {
     font-family: "Poppins", sans-serif;
+}
+.section-4 > h2 {
+    font-weight: 650;
+}
+.section-4 > p {
+    color: hsl(0, 0%, 75%);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.features-section {
+    background-color: #f0f1f6;
+    padding: 4rem;
+    font-family: "Poppins", sans-serif;
+}
+
+/* .card-1 {
+}
+.card-2 {
+    padding-top: 2rem;
+}
+.card-3 {
+    padding-top: 4rem;
+} */
+
+.card {
+    position: relative;
+    padding-top: 60px !important;
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background-color: #3b3054;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: -35px;
+    left: 18%;
+    transform: translateX(-50%);
 }
