@@ -36,10 +36,11 @@ This project serves as practice for working with external APIs, managing client-
 ### 🚀 Live Demo
 
 **View the project live:**
-👉 🌐 **Live Demo:** [Click Here for Live Demo][https://structbase.github.io/Shortly/]
+
+👉 🌐 **Live Demo:** [Click Here for Live Demo](https://structbase.github.io/Shortly/)
 
 **Project Repo**
-👉 💻 **Repository:** [View Source on GitHub][https://github.com/structbase/Shortly]
+👉 💻 **Repository:** [View Source on GitHub](https://github.com/structbase/Shortly)
 
 ---
 
