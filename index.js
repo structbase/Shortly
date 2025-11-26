@@ -5,6 +5,12 @@ const renderLinks = document.getElementById("render-links");
 
 const TOKEN = "1e93bd6ac750c73895adf0ae72366562fa83f28a";
 
+/**
+ * async fetch function
+ * @param {string} longUrl The URL to shorten.
+ * @param {string} TOKEN The Bitly API token.
+ * @returns {Promise<string>} The shortened URL.
+ */
 async function fetchData(longUrl, TOKEN) {
     const apiUrl = "https://api-ssl.bitly.com/v4/shorten";
     const requestBody = { long_url: longUrl, domain: "bit.ly" };
@@ -30,7 +36,12 @@ async function fetchData(longUrl, TOKEN) {
     }
 }
 
-// --- Create Bootstrap card ---
+/**
+ * Creates link card.
+ * @param {string} originalUrl The original URL.
+ * @param {string} shortUrl The shortened URL.
+ * @returns {HTMLElement} The card element.
+ */
 function createLinkCard(originalUrl, shortUrl) {
     const cardDiv = document.createElement("div");
     cardDiv.className = "place-of-links container p-3 rounded shadow-sm mb-3";
@@ -57,19 +68,50 @@ function createLinkCard(originalUrl, shortUrl) {
         </div>
     `;
 
-    // Copy button
+    // functional copy button  
     const copyBtn = cardDiv.querySelector(".copy-btn");
     copyBtn.addEventListener("click", () => {
         navigator.clipboard
             .writeText(shortUrl)
-            .then(() => alert("Copied!"))
-            .catch(() => alert("Failed to copy"));
+            .then(() => {
+                copyBtn.textContent = "Copied!";
+                copyBtn.style.backgroundColor = "#3b3054";
+            })
+            .catch((err) => {
+                console.error("Failed to copy", err);
+                copyBtn.textContent = "Error";
+                copyBtn.style.backgroundColor = "#dc3545"; // Bootstrap Danger Red
+            });
     });
 
     return cardDiv;
 }
 
-// --- Event listener ---
+/**
+ * Saves a new link pair to localStorage.
+ * Retrieves existing links, adds the new one, and saves the updated array.
+ */
+function saveLink(originalUrl, shortUrl) {
+    const links = JSON.parse(localStorage.getItem("shortenedLinks")) || [];
+    links.push({ originalUrl, shortUrl });
+    localStorage.setItem("shortenedLinks", JSON.stringify(links));
+}
+
+/**
+ * Loads and renders saved links on page load.
+ */
+function loadLinks() {
+    const links = JSON.parse(localStorage.getItem("shortenedLinks")) || [];
+    links.forEach((link) => {
+        const card = createLinkCard(link.originalUrl, link.shortUrl);
+        renderLinks.appendChild(card);
+    });
+}
+
+/**
+ * Handles the "Shorten It!" button click.
+ * Validates input, calls API, renders the result, saves to storage, and handles errors.
+ */
 shortenBtn.addEventListener("click", async () => {
     const longUrl = urlInput.value.trim();
     if (!longUrl) {
@@ -80,8 +122,8 @@ shortenBtn.addEventListener("click", async () => {
     try {
         const shortLink = await fetchData(longUrl, TOKEN);
         const card = createLinkCard(longUrl, shortLink);
-        renderLinks.prepend(card); // newest first
-        saveLink(longUrl, shortLink); // save to local storage
+        renderLinks.prepend(card); 
+        saveLink(longUrl, shortLink);
         urlInput.value = "";
         errorMessage.textContent = "";
     } catch (error) {
@@ -89,3 +131,6 @@ shortenBtn.addEventListener("click", async () => {
         errorMessage.textContent = "Failed to shorten URL.";
     }
 });
+
+// Loading if links already exist
+loadLinks();
