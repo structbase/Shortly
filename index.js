@@ -3,16 +3,11 @@ const errorMessage = document.getElementById("error-text");
 const shortenBtn = document.getElementById("shorten-Btn");
 const renderLinks = document.getElementById("render-links");
 
-const TOKEN = env.TOKEN;
+const TOKEN = "1e93bd6ac750c73895adf0ae72366562fa83f28a";
 
 async function fetchData(longUrl, TOKEN) {
     const apiUrl = "https://api-ssl.bitly.com/v4/shorten";
-
-    const requestBody = {
-        long_url: longUrl,
-        domain: "bit.ly",
-    };
-
+    const requestBody = { long_url: longUrl, domain: "bit.ly" };
     const requestOptions = {
         method: "POST",
         headers: {
@@ -21,7 +16,6 @@ async function fetchData(longUrl, TOKEN) {
         },
         body: JSON.stringify(requestBody),
     };
-
     try {
         const response = await fetch(apiUrl, requestOptions);
         if (!response.ok) {
@@ -30,7 +24,31 @@ async function fetchData(longUrl, TOKEN) {
         }
         const data = await response.json();
         return data.link;
-    } catch {
-        
+    } catch (error) {
+        console.error("Error shortening URL:", error);
+        throw error;
     }
 }
+
+shortenBtn.addEventListener("click", async () => {
+    const longUrl = urlInput.value.trim();
+
+    if (!longUrl) {
+        errorMessage.textContent = "Please enter a URL.";
+        return;
+    }
+
+    try {
+        const shortLink = await fetchData(longUrl, TOKEN);
+
+        const linkEl = document.createElement("p");
+        linkEl.textContent = shortLink;
+        renderLinks.appendChild(linkEl);
+
+        urlInput.value = "";
+        errorMessage.textContent = "";
+    } catch (error) {
+        console.error(error);
+        errorMessage.textContent = "Failed to shorten URL.";
+    }
+});
