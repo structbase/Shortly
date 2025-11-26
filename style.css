@@ -11,6 +11,10 @@
     color: hsl(260, 8%, 14%);
 } */
 
+html {
+    font-family: "Poppins", sans-serif;
+}
+
 header {
     margin-top: 2rem;
     margin-bottom: 4rem;
@@ -31,7 +35,6 @@ header li {
 }
 
 .custom-button {
-    font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-size: 0.8rem;
     color: aliceblue;
@@ -47,13 +50,11 @@ header li {
 }
 
 .secondary-button {
-    font-family: "Poppins", sans-serif;
     font-weight: bold;
 }
 
 .list-item {
     list-style-type: none;
-    font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-size: 0.8rem;
     color: hsl(0, 0%, 75%);
@@ -74,21 +75,20 @@ header li {
 }
 
 .here-paragraph {
-    font-family: "Poppins", sans-serif;
     font-size: 1.1rem;
     font-weight: 500;
     color: hsl(0, 0%, 75%) !important;
 }
 
 .section-3 {
-    margin-top: 4.07rem;
     background-image: url("./images/bg-shorten-desktop.svg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 8.2rem;
     background-color: hsl(257, 27%, 26%);
 
-
+    transform: translateY(-80%);
+    margin-bottom: -4rem;
 }
 
 .section-3 > input {
@@ -97,9 +97,6 @@ header li {
     margin-left: 10px;
 }
 
-.section-4 {
-    font-family: "Poppins", sans-serif;
-}
 .section-4 > h2 {
     font-weight: 650;
 }
@@ -112,17 +109,7 @@ header li {
 .features-section {
     background-color: #f0f1f6;
     padding: 4rem;
-    font-family: "Poppins", sans-serif;
 }
-
-/* .card-1 {
-}
-.card-2 {
-    padding-top: 2rem;
-}
-.card-3 {
-    padding-top: 4rem;
-} */
 
 .card {
     position: relative;
@@ -142,4 +129,26 @@ header li {
     top: -35px;
     left: 18%;
     transform: translateX(-50%);
+}
+
+.section-6 {
+    background-image: url("./images/bg-boost-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 12rem;
+    background-color: hsl(257, 27%, 26%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.section-6 > h2 {
+    font-weight: bold;
+    color: white;
+}
+
+.section-6 > button{
+    font-size: 1.1rem;
+    padding-left:1.6rem ;
+    padding-right:1.6rem ;
 }
