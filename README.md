@@ -1,95 +1,188 @@
-# Frontend Mentor - Shortly URL shortening API Challenge
+# 🚀 Shortly – URL Shortening App
 
-![Design preview for the Shortly URL shortening API coding challenge](preview.jpg)
+A clean and responsive URL shortening web application inspired by the **Frontend Mentor Shortly challenge**.
+This version integrates with the **Bitly API**, stores links using **Local Storage**, and includes a fully styled link history UI with copy buttons.
 
-## Welcome! 👋
+---
 
-Thanks for checking out this front-end coding challenge.
+### 🎯 Objectives / The Challenge
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+The goal of this project is to build a fully functional URL-shortening landing page that integrates with the **Bitly API** to generate shortened URLs. The design and layout aim to closely match the original challenge specifications while ensuring a smooth and responsive user experience across all devices.
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+This project serves as practice for working with external APIs, managing client-side data, handling errors, and building clean, interactive UI components. Any tools or libraries can be used, allowing flexibility and experimentation throughout development.
 
-## The challenge
+#### 🧩 Users should be able to:
 
-Your challenge is to build out this landing page, integrate with the [Clean URI API](https://cleanuri.com/docs) and get it looking as close to the design as possible.
+-   **View a responsive layout** that adapts smoothly to different screen sizes (mobile, tablet, desktop)
+-   **Shorten any valid URL** using the Bitly API
+-   **Persist previously shortened links** using Local Storage so they remain available after page refresh
+-   **Copy shortened links to the clipboard** with a single click
+-   **Receive clear error messages**, including:
+    -   When the input field is empty
+    -   When the API request fails or returns an error
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+---
 
-Your users should be able to:
+### 🖥️ Desktop View
 
-- View the optimal layout for the site depending on their device's screen size
-- Shorten any valid URL
-- See a list of their shortened links, even after refreshing the browser
-- Copy the shortened link to their clipboard in a single click
-- Receive an error message when the `form` is submitted if:
-- The `input` field is empty
+![Desktop Screenshot](./screenshots/desktop.png)
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+### 📱 Mobile View
 
-## Where to find everything
+![Mobile Screenshot](./screenshots/mobile.png)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design.
+---
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`.
 
-If you would like the Figma design file to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+### 🚀 Live Demo
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+**View the project live:**
+👉 [https://structbase.github.io/Shortly/](#)
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+**Project Repo**
+👉 [https://github.com/structbase/Shortly](#)
 
-## Building your project
+---
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+## 📌 Features
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+### **✔ URL Shortening (Bitly API)**
 
-## Deploying your project
+Users can enter any valid URL and receive a shortened link powered by the Bitly API.
 
-It's worth noting that you may run into a [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) error once you host your project that prevents the API request from succeeding. To prevent this, you'll need to research proxy servers or how to implement one yourself. As mentioned above, there are many ways to host your project for free. Our recommended hosts for this challenge (because they allow for serverless functions if needed for the proxy) are:
+### ✔ **Persistent Link History (Local Storage)**
 
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+Shortened links are saved locally so the list stays even after refreshing or closing the browser.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+### ✔ **Copy-to-Clipboard**
 
-## Create a custom `README.md`
+Each shortened link has a “Copy” button for instant copying.
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+### ✔ **Responsive UI**
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+Built with Bootstrap and custom styling to match the Shortly design.
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+### ✔ **Error Handling**
 
-## Submitting your solution
+-   Shows message if input field is empty
+-   Shows API error message if Bitly request fails
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+---
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+## 🛠️ Built With
 
-## Sharing your solution
+-   **HTML5**
+-   **CSS3**
+-   **Bootstrap 5**
+-   **JavaScript (ES6+)**
+-   **Bitly API**
+-   **Local Storage**
 
-There are multiple places you can share your solution:
+---
 
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community).
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+## 🔐 Environment Variables (API Token)
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback.
+This project requires a **Bitly API token**.
+Since GitHub Pages cannot hide environment variables, tokens **must is** be exposed.
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+## 📂 Folder Structure
 
-## Got feedback for us?
+```
+├── README.md
+├── design
+│   ├── desktop-active-states.jpg
+│   ├── desktop-design.jpg
+│   ├── mobile-active-states.jpg
+│   ├── mobile-design.jpg
+│   └── mobile-navigation.jpg
+├── images
+│   ├── bg-boost-desktop.svg
+│   ├── bg-boost-mobile.svg
+│   ├── bg-shorten-desktop.svg
+│   ├── bg-shorten-mobile.svg
+│   ├── favicon-32x32.png
+│   ├── icon-brand-recognition.svg
+│   ├── icon-detailed-records.svg
+│   ├── icon-facebook.svg
+│   ├── icon-fully-customizable.svg
+│   ├── icon-instagram.svg
+│   ├── icon-pinterest.svg
+│   ├── icon-twitter.svg
+│   ├── illustration-working.svg
+│   └── logo.svg
+├── index.html
+├── index.js
+├── preview.jpg
+├── screenshots
+│   ├── desktop.png
+│   └── mobile.png
+├── style-guide.md
+└── style.css
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi@frontendmentor.io.
+4 directories, 27 files
+```
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+## 🚀 Getting Started
 
-**Have fun building!** 🚀
+### **1️⃣ Clone the repository**
+
+```bash
+git clone https://github.com/structbase/Shortly
+```
+
+### **2️⃣ Open index.html**
+
+No build steps required.
+
+---
+
+## 🧠 How It Works
+
+### **➡ Fetching shortened links**
+
+```js
+async function fetchData(longUrl, TOKEN) {
+    const response = await fetch("https://api-ssl.bitly.com/v4/shorten", {
+        method: "POST",
+        headers: {
+            Authorization: `Bearer ${TOKEN}`,
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ long_url: longUrl }),
+    });
+}
+```
+
+### **➡ Saving to local storage**
+
+```js
+const links = JSON.parse(localStorage.getItem("shortenedLinks")) || [];
+links.push({ originalUrl, shortUrl });
+localStorage.setItem("shortenedLinks", JSON.stringify(links));
+```
+
+### **➡ Loading on page load**
+
+```js
+window.addEventListener("DOMContentLoaded", loadLinks);
+```
+
+## 📣 Acknowledgements
+
+Challenge inspired by **Frontend Mentor**.
+API provided by **Bitly**.
+
+---
+
+
+# 📝 Reflection Document
+
+The development process for this project was both challenging and rewarding. I began by planning the overall HTML structure and determining how each section would fit together visually. Once I moved into implementation, I realized how extensive the markup needed to be, and this part of the project took more time than expected. To speed up the workflow, I incorporated Bootstrap to handle layout and responsiveness and created several custom utility classes to keep the styling consistent and reusable.
+
+Matching the provided UI designs required a lot of careful adjustments, and I spent a good amount of time fine-tuning spacing, fonts, and colors to stay as close to the design as possible. Integrating the Bitly API introduced another layer of complexity. After researching how the API works, reading documentation, and doing plenty of Googling, I learned that I needed to create an account and generate an API token to make authenticated requests.
+
+During the JavaScript phase, the biggest challenge I faced was figuring out how to securely hide the API token. My original plan was to deploy the project on GitHub Pages, but after deeper research, I learned that client-side deployments cannot hide sensitive tokens. Since Bitly’s free tier only allows five requests per month, I ultimately accepted the limitation and used the token directly in the client-side code.
+
+Overall, this project strengthened my understanding of API integration, responsive UI development, and browser storage, and it highlighted areas I plan to improve in future projects—especially handling secrets securely and structuring large-scale front-end code more efficiently.
+
+---
