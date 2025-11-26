@@ -104,7 +104,7 @@ body {
 }
 
 .section-4 {
-    padding-bottom: 4rem;
+    padding-bottom: 3rem;
 }
 
 .section-4 > h2 {
@@ -198,4 +198,11 @@ footer > div > h2 {
 .custom-card-title {
     font-weight: bolder;
     font-size: 1.4rem;
+}
+
+.card-container-2{
+    padding-top: 3rem;
+}
+.card-container-3{
+    padding-top: 6rem;
 }
