@@ -30,9 +30,48 @@ async function fetchData(longUrl, TOKEN) {
     }
 }
 
+// --- Create Bootstrap card ---
+function createLinkCard(originalUrl, shortUrl) {
+    const cardDiv = document.createElement("div");
+    cardDiv.className = "place-of-links container p-3 rounded shadow-sm mb-3";
+    cardDiv.style.background = "#fff";
+
+    cardDiv.innerHTML = `
+        <div class="row">
+            <div class="col-12">
+                <p class="m-0 fw-semibold text-dark">${originalUrl}</p>
+            </div>
+            <div class="col-12">
+                <hr class="my-3" />
+            </div>
+            <div class="col-12 mb-3">
+                <p class="m-0 fw-semibold" style="color: #2acfcf">
+                    <a href="${shortUrl}" target="_blank" class="text-decoration-none" style="color: #2acfcf;">
+                        ${shortUrl}
+                    </a>
+                </p>
+            </div>
+            <div class="col-12">
+                <button class="btn w-100 text-white copy-btn" style="background: #2acfcf;">Copy</button>
+            </div>
+        </div>
+    `;
+
+    // Copy button
+    const copyBtn = cardDiv.querySelector(".copy-btn");
+    copyBtn.addEventListener("click", () => {
+        navigator.clipboard
+            .writeText(shortUrl)
+            .then(() => alert("Copied!"))
+            .catch(() => alert("Failed to copy"));
+    });
+
+    return cardDiv;
+}
+
+// --- Event listener ---
 shortenBtn.addEventListener("click", async () => {
     const longUrl = urlInput.value.trim();
-
     if (!longUrl) {
         errorMessage.textContent = "Please enter a URL.";
         return;
@@ -40,11 +79,9 @@ shortenBtn.addEventListener("click", async () => {
 
     try {
         const shortLink = await fetchData(longUrl, TOKEN);
-
-        const linkEl = document.createElement("p");
-        linkEl.textContent = shortLink;
-        renderLinks.appendChild(linkEl);
-
+        const card = createLinkCard(longUrl, shortLink);
+        renderLinks.prepend(card); // newest first
+        saveLink(longUrl, shortLink); // save to local storage
         urlInput.value = "";
         errorMessage.textContent = "";
     } catch (error) {
