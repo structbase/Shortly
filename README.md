@@ -33,14 +33,13 @@ This project serves as practice for working with external APIs, managing client-
 
 ---
 
-
 ### 🚀 Live Demo
 
 **View the project live:**
-👉 [https://structbase.github.io/Shortly/](#)
+👉 🌐 **Live Demo:** [Click Here for Live Demo][https://structbase.github.io/Shortly/]
 
 **Project Repo**
-👉 [https://github.com/structbase/Shortly](#)
+👉 💻 **Repository:** [View Source on GitHub][https://github.com/structbase/Shortly]
 
 ---
 
@@ -174,7 +173,6 @@ API provided by **Bitly**.
 
 ---
 
-
 # 📝 Reflection Document
 
 The development process for this project was both challenging and rewarding. I began by planning the overall HTML structure and determining how each section would fit together visually. Once I moved into implementation, I realized how extensive the markup needed to be, and this part of the project took more time than expected. To speed up the workflow, I incorporated Bootstrap to handle layout and responsiveness and created several custom utility classes to keep the styling consistent and reusable.
@@ -186,3 +184,9 @@ During the JavaScript phase, the biggest challenge I faced was figuring out how 
 Overall, this project strengthened my understanding of API integration, responsive UI development, and browser storage, and it highlighted areas I plan to improve in future projects—especially handling secrets securely and structuring large-scale front-end code more efficiently.
 
 ---
+
+## ✍️ Author
+
+Developed by **Abenezer**
+
+> Junior developer
