@@ -97,10 +97,16 @@ body {
     margin-bottom: -4rem;
 }
 
-.section-3 > input {
+.section-3 input {
     height: 3.2rem;
+    width: 95%;
     border: none;
     margin-left: 10px;
+}
+
+.input-error{
+    color: red;
+    margin-left: 2rem;
 }
 
 .section-4 {
